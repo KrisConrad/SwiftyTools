@@ -53,8 +53,8 @@ Requires `NotificationTokenHandling`
   deinit {
     unregisterNotificationTokens()
   }
-  
-extension ChatRoomController: KeyboardObserving {
+
+extension SomeViewController: KeyboardObserving {
   func keyboardWillShow(_ notification: Notification) {
     // Adjust view to account for keyboard covering part of the screen
     ...
@@ -84,7 +84,7 @@ Requires `NotificationTokenHandling`
     unregisterNotificationTokens()
   }
 
-extension ChatRoomController: UIThemeable {
+extension SomeViewController: UIThemeable {
    func userThemeSelectionDidChange(_ theme: UITheme) {
      view.backgroundColor = theme == .light ? .white : .black
      // theme stuff here
