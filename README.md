@@ -44,7 +44,6 @@ Requires `NotificationTokenHandling`
 
 ###### Example:
 ```
-extension ChatRoomController: KeyboardObserving {
   // Register for theme change notifications
   override func viewDidLoad() {
     registerForKeyboardNotifications()
@@ -54,7 +53,8 @@ extension ChatRoomController: KeyboardObserving {
   deinit {
     unregisterNotificationTokens()
   }
-
+  
+extension ChatRoomController: KeyboardObserving {
   func keyboardWillShow(_ notification: Notification) {
     // Adjust view to account for keyboard covering part of the screen
     ...
